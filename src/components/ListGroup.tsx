@@ -1,6 +1,6 @@
-// Import the necessary React components and hooks.
-import React, { useState } from "react";
+import { useState } from "react";
 
+// Import the necessary React components and hooks.
 function ListGroup() {
   // Define an array of cities.
   let Cities = ["Lagos", "Ibadan", "Ilorin", "Port Harcourt"];
