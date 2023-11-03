@@ -6,7 +6,7 @@ interface StateProperties {
 } //Props here
 function Properties({ cities, heading }: StateProperties) {
   const [state, setState] = useState(1);
-  const [selectedCity, setselectedCity] = useState(-1);
+  const [selectedCity, setSelectedCity] = useState(-1);
 
   return (
     <>
@@ -16,11 +16,11 @@ function Properties({ cities, heading }: StateProperties) {
           <li
             className={
               selectedCity === index
-                ? "list-group-item acive"
+                ? "list-group-item active"
                 : "list-group-item "
             }
             key={index}
-            onClick={() => setselectedCity(index)}
+            onClick={() => setSelectedCity(index)}
           >
             {city}
           </li>
