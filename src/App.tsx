@@ -1,10 +1,8 @@
-//import ListGroup from "./components/ListGroup";
-//import Properties from "./components/Props.tsx";
 import Button from "./components/Button";
 
-const Alert = 1;
+const Alert = true;
 const handleClick = () => {
-  Alert === 1 ? alert("true") : console.log(false);
+  Alert === true ? alert("true") : console.log(false);
 };
 function App() {
   //const Cities = ["Lagos", "Texas", "Fineland", "Mexico", "Bahamas", "Madrid"];
