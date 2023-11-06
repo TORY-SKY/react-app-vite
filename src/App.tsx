@@ -9,7 +9,7 @@ function App() {
       <div>
         <div className="flex flex-col items-center justify-center h-screen">
           <h1 className="text-3xl ">Hello, world!</h1>
-          <p className="text-gray-500">
+          <p className="text-danger-500">
             This is a React application with Tailwind CSS.
           </p>
         </div>
