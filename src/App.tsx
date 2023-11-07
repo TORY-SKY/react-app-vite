@@ -3,6 +3,9 @@ import Calculator from "./components/Calculator";
 import "./App.css";
 
 function App() {
+  const Fruits = ["apple", "watermelon", "orange"];
+  console.log(Fruits.includes("orange"[1]));
+  alert(Fruits.includes("orange"[1]));
   //const Cities = ["Lagos", "Texas", "Fineland", "Mexico", "Bahamas", "Madrid"];
   return (
     <>
