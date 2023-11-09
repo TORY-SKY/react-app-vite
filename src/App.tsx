@@ -9,13 +9,12 @@ function App() {
     { id: 2, text: `${Vicky} Song Writer` },
     { id: 3, text: `${Vicky} An Automotive Engineer` },
   ];
-  console.log(Todo);
 
   return (
     <>
       {!(<FetchComponent />) ? (
         <>
-          <UseEffect name={Vicky} />
+          <UseEffect name={Todo} />
         </>
       ) : (
         <>
@@ -23,6 +22,7 @@ function App() {
           <p>Waiting for data...</p>
         </>
       )}
+      <FetchComponent />
     </>
   );
 }
