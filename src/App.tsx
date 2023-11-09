@@ -1,19 +1,28 @@
-import Button from "./components/Button";
-import Calculator from "./components/Calculator";
-import "./App.css";
+import FetchComponent from "./components/FetchComponent";
+import UseEffect from "./components/UseEffect";
 
 function App() {
-  const Fruits = ["apple", "watermelon", "orange"];
-  console.log(Fruits.includes("orange"[1]));
-  alert(Fruits.includes("orange"[1]));
-  //const Cities = ["Lagos", "Texas", "Fineland", "Mexico", "Bahamas", "Madrid"];
+  const Vicky = "Became";
+  const Todo = [
+    { id: 0, text: `${Vicky} A Full Stack Web Developer` },
+    { id: 1, text: `${Vicky} A Guitarist` },
+    { id: 2, text: `${Vicky} Song Writer` },
+    { id: 3, text: `${Vicky} An Automotive Engineer` },
+  ];
+  console.log(Todo);
+
   return (
     <>
-      <Calculator />
-      <Button children="Click me please" />
-
-      <div className="display1">Display 1</div>
-      <div className="display1">Display 2</div>
+      {!(<FetchComponent />) ? (
+        <>
+          <UseEffect name={Vicky} />
+        </>
+      ) : (
+        <>
+          <UseEffect name={Todo} />
+          <p>Waiting for data...</p>
+        </>
+      )}
     </>
   );
 }
