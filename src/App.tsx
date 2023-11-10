@@ -1,5 +1,4 @@
-import FetchComponent from "./components/FetchComponent";
-import UseEffect from "./components/UseEffect";
+import APIFe from "./components/APIFe";
 
 function App() {
   const Vicky = "Became";
@@ -12,17 +11,15 @@ function App() {
 
   return (
     <>
-      {!(<FetchComponent />) ? (
-        <>
-          <UseEffect name={Todo} />
-        </>
-      ) : (
-        <>
-          <UseEffect name={Todo} />
-          <p>Waiting for data...</p>
-        </>
-      )}
-      <FetchComponent />
+      <h1>h1 delicious</h1>
+      <APIFe />
+      <button
+        onClick={() => {
+          alert("hello world");
+        }}
+      >
+        Alert
+      </button>
     </>
   );
 }
