@@ -7,31 +7,37 @@ function APIFe() {
   useEffect(() => {
     const FetchData = async () => {
       try {
-        const response = await fetch("https://www.coingecko.com/en/api");
+        const response = await fetch(
+          "https://jsonplaceholder.typicode.com/users"
+        );
         if (!response.ok) {
           throw new Error("Brotherly, theres a network failed request");
         }
         const result = await response.json();
         console.log(result);
         setData(result);
-      } catch (error) {
-        setError(Error);
+      } catch (err) {
+        setError(err);
       } finally {
         setloading(false);
       }
     };
     FetchData();
-  });
+  }, []);
+  console.log(data, "THE CONSOLE IS HERE");
   if (loading) {
     return <p>...loading</p>;
   }
   if (Error) {
-    return <p>Error: {Error.message}</p>;
+    return <p>Error: {error.message}</p>;
   }
   return (
     <>
       <h1>Data from API:</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
+      {data.map((item) => {
+        <li key={item.id}>{item.name} VICTORY SKY</li>;
+      })}
     </>
   );
 }
