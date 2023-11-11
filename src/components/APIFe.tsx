@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function APIFe() {
   const [data, setData] = useState(null);
   const [loading, setloading] = useState(true);
-  const [Error, setError] = useState(null);
+  const [error, setError] = useState(null);
   useEffect(() => {
     const FetchData = async () => {
       try {
@@ -17,27 +17,26 @@ function APIFe() {
         console.log(result);
         setData(result);
       } catch (err) {
-        setError(err);
+        setError(error);
       } finally {
         setloading(false);
       }
     };
     FetchData();
   }, []);
-  console.log(data, "THE CONSOLE IS HERE");
   if (loading) {
     return <p>...loading</p>;
   }
-  if (Error) {
-    return <p>Error: {error.message}</p>;
+  if (error) {
+    return <p>Error: {error}</p>;
   }
+
   return (
     <>
+      <pre>{/*JSON.stringify(data, null, 2)*/}</pre>
       <h1>Data from API:</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-      {data.map((item) => {
-        <li key={item.id}>{item.name} VICTORY SKY</li>;
-      })}
+
+      <h6>{JSON.stringify(data)}</h6>
     </>
   );
 }

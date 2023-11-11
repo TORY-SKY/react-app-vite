@@ -1,4 +1,4 @@
-import APIFe from "./components/APIFe";
+import StateMan from "./components/StateMan";
 
 function App() {
   const Vicky = "Became";
@@ -11,15 +11,7 @@ function App() {
 
   return (
     <>
-      <h1>h1 delicious</h1>
-      <APIFe />
-      <button
-        onClick={() => {
-          alert("hello world");
-        }}
-      >
-        Alert
-      </button>
+      <StateMan />
     </>
   );
 }
