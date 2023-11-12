@@ -1,19 +1,33 @@
 import { useState } from "react";
 
 const StateMan = () => {
-  const [count, setCount] = useState(0);
   const [list, setList] = useState(["Tony", "Captain", "Hulk"]);
-  function addCount() {
-    setCount(count + 1);
+  const [name, setName] = useState("");
+  function Addname() {
+    if (name === "") {
+      return false;
+    }
+    setList([...list, name]);
+    setName("");
+  }
+  function Deletename() {
+    setList(["names here..."]);
   }
   return (
     <div>
       <ul>
-        {list.map((item) => (
-          <li>{item}</li>
+        {list.map((item, index) => (
+          <li key={index}>{item}</li>
         ))}
       </ul>
-      <button onClick={addCount}>count: {count}</button>
+      <hr />
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={Addname}>add name</button>
+      <button onClick={Deletename}>Delete name</button>
     </div>
   );
 };

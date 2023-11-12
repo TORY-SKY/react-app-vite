@@ -1,5 +1,5 @@
+import ReducerMan from "./components/ReducerMan";
 import StateMan from "./components/StateMan";
-
 function App() {
   const Vicky = "Became";
   const Todo = [
@@ -12,6 +12,7 @@ function App() {
   return (
     <>
       <StateMan />
+      <ReducerMan />
     </>
   );
 }
