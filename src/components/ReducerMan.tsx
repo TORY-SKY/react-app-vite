@@ -1,40 +1,47 @@
 import { useReducer } from "react";
+//App state interface
+interface AppState {
+  names: [];
+  name: string;
+}
+//App action interface
+interface AppAction {
+  type: "Addition" | "Subtraction" | "Change_Name";
+  payload?:
+}
 //the Reducer function
-const reducer = (state, action) => {
+const reducer = (state: AppState, action: AppAction) => {
   switch (action.type) {
     case "Addition":
-      return { count: state.count + 1 };
+      return { ...state, names: state.name };
     case "Subtraction":
-      return { count: state.count - 1 };
+      return { ...state, names: state.name };
+    case "Change_Name":
+      return { ...state, names: action.payload };
     default:
       return state;
   }
 };
 const ReducerMan = () => {
   //declaring the useReducer
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
-
+  //are sure there's something called self-taught programmer?
+  //im not sure
+  const [state, dispatch] = useReducer(reducer, {
+    names: [],
+    name: "Vic",
+  });
   return (
     <div>
-      <h1>Count: {state.count}</h1>
-      <button
-        onClick={() =>
-          dispatch({
-            type: "Addition",
-          })
-        }
-      >
-        Add
-      </button>
-      <button
-        onClick={() =>
-          dispatch({
-            type: "Substraction",
-          })
-        }
-      >
-        Substract
-      </button>
+      <h2>{state.names}</h2>
+      <h2>{(state.name, state.names)}</h2>
+      <br />
+      <input
+        type="text"
+        value={state.names}
+        onChange={(e) => {
+          dispatch({ ...state, type: "Change_Name", payload: e.target.value });
+        }}
+      />
     </div>
   );
 };
