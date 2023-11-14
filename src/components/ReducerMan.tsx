@@ -7,9 +7,10 @@ interface AppState {
 //App action interface
 interface AppAction {
   type: "Addition" | "Subtraction" | "Change_Name";
-  payload?:
+  payload?: string;
 }
 //the Reducer function
+
 const reducer = (state: AppState, action: AppAction) => {
   switch (action.type) {
     case "Addition":
