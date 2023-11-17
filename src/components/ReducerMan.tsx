@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 //App state interface
 interface AppState {
   names: [];
@@ -7,7 +7,6 @@ interface AppState {
 //App action interface
 interface AppAction {
   type: "Addition" | "Subtraction" | "Change_Name";
-  payload?: string;
 }
 //the Reducer function
 
@@ -23,14 +22,14 @@ const reducer = (state: AppState, action: AppAction) => {
       return state;
   }
 };
+
 const ReducerMan = () => {
+  const [decstate, setDecState] = useState({ names: [], name: "Vic" });
+
   //declaring the useReducer
   //are sure there's something called self-taught programmer?
   //im not sure
-  const [state, dispatch] = useReducer(reducer, {
-    names: [],
-    name: "Vic",
-  });
+  const [state, dispatch] = useReducer(reducer, decstate);
   return (
     <div>
       <h2>{state.names}</h2>
