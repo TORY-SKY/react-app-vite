@@ -1,3 +1,4 @@
+import ExpensiveComp from "./components/MemoMan";
 import ReducerMan from "./components/ReducerMan";
 import StateMan from "./components/StateMan";
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <StateMan />
       <ReducerMan />
+      <ExpensiveComp value={1} />
     </>
   );
 }
