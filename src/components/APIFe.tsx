@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MemoMan from "./MemoMan";
 
 function APIFe() {
   const [data, setData] = useState(null);
@@ -37,6 +38,7 @@ function APIFe() {
       <h1>Data from API:</h1>
 
       <h6>{JSON.stringify(data)}</h6>
+      <MemoMan />
     </>
   );
 }

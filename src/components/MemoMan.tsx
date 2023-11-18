@@ -1,10 +1,22 @@
 import React, { useMemo } from "react";
 
-const MemoMan = () => {
-  const numbers = [10, 20, 30, 40];
-  let total = useMemo(() => numbers.reduce((acc, no) => acc + no), 0);
-  console.log(total);
-  return <div></div>;
+const ExpensiveCompnent = ({ a, b }) => {
+  const result = useMemo(() => {
+    console.log(`state change`);
+    return a + b;
+  }, [a, b]);
+  return;
+  <div>
+    <h1>{result}</h1>
+  </div>;
 };
+
+function MemoMan() {
+  return (
+    <div>
+      <ExpensiveCompnent a={1} b={2} />
+    </div>
+  );
+}
 
 export default MemoMan;
