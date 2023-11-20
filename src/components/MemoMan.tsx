@@ -1,6 +1,8 @@
 import { useMemo } from "react";
-
-const ExpensiveComp = ({ value }) => {
+interface Thevalue {
+  value: number;
+}
+const ExpensiveComp = ({ value }: Thevalue) => {
   const squaredValue = useMemo(() => {
     console.log("calculating squaredValue...");
     return value * value;

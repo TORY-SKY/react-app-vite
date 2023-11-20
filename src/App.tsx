@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ExpensiveComp from "./components/MemoMan";
 import ReducerMan from "./components/ReducerMan";
 import StateMan from "./components/StateMan";
@@ -10,11 +11,19 @@ function App() {
     { id: 3, text: `${Vicky} An Automotive Engineer` },
   ];
 
+  const [theState, setThestate] = useState(3);
+
   return (
     <>
       <StateMan />
       <ReducerMan />
-      <ExpensiveComp value={1} />
+      <ExpensiveComp value={theState} />
+      <button onClick={() => setThestate(theState + 1)}>
+        Change the props
+      </button>
+      <button onClick={() => setThestate(theState - 1)}>
+        Change the props
+      </button>
     </>
   );
 }
