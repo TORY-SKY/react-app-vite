@@ -1,5 +1,7 @@
 import { useReducer, useState } from "react";
-//App state interface
+
+/*useReducer is a hook in React that is used for managing more complex state logic in your components. It is particularly useful when you have state transitions that depend on 
+the previous state or when the next state value is based on the current state. */
 interface AppState {
   names: [];
   name: string;
@@ -27,8 +29,8 @@ const ReducerMan = () => {
   const [decstate, setDecState] = useState({ names: [], name: "Vic" });
 
   //declaring the useReducer
-  //are sure there's something called self-taught programmer?
-  //im not sure
+  //im sure there's something called self-taught programmer?
+  //i am one
   const [state, dispatch] = useReducer(reducer, decstate);
   return (
     <div>
