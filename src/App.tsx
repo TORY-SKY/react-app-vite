@@ -1,9 +1,10 @@
 import { useState } from "react";
 import ExpensiveComp from "./components/MemoMan";
-import ReducerMan from "./components/ReducerMan";
+
 import StateMan from "./components/StateMan";
 import TheUseMemoComp from "./components/TheUseMemoComp";
 import SideEffect from "./components/SideEffect";
+import TheUseRefHook from "./components/TheUseRefHook";
 
 function App() {
   const Vicky = "Became";
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <SideEffect />
+      <TheUseRefHook />
     </>
   );
 }
