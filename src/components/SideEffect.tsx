@@ -24,7 +24,7 @@ const SideEffect = () => {
           setCalc(calc + 1);
         }}
       >
-        {calc}
+        {calc} 🛒
       </button>
       <button
         onClick={() => {
