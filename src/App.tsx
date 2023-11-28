@@ -1,4 +1,4 @@
-import Colors from "./components/Colors";
+import TheUseEffect from "./components/TheUseEffect";
 
 function App() {
   const Vicky = "Became";
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Colors />
+      <TheUseEffect />
     </>
   );
 }
