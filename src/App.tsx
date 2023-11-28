@@ -1,10 +1,3 @@
-import { useState } from "react";
-import ExpensiveComp from "./components/MemoMan";
-
-import StateMan from "./components/StateMan";
-import TheUseMemoComp from "./components/TheUseMemoComp";
-import SideEffect from "./components/SideEffect";
-import TheUseRefHook from "./components/TheUseRefHook";
 import Colors from "./components/Colors";
 
 function App() {
