@@ -1,4 +1,5 @@
 import TheUseEffect from "./components/TheUseEffect";
+import BardPokemon from "./components/BardPokemon";
 
 function App() {
   const Vicky = "Became";
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <TheUseEffect />
+      <BardPokemon />
     </>
   );
 }
