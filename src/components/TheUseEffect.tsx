@@ -16,9 +16,10 @@ const TheUseEffect = () => {
   }, []);
   const [input, setInput] = useState("");
   const [displayinput, setdisplayinput] = useState("");
-  const [saveDisp, setsaveDisp] = useState([]);
+  const [saveDisp, setsaveDisp] = useState(["Victor"]);
   function SaveInput() {
     let TheArr = [...input, displayinput];
+    alert(TheArr);
   }
   const CallBackFunc = useCallback((e) => {
     setInput(e.target.value);
