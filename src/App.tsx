@@ -2,6 +2,8 @@ import LoginContext from "./components/ContextFile/Context";
 import { useState } from "react";
 import ProfilePage from "./components/ProfilePage";
 import LoginForm from "./components/LoginForm";
+import { Router } from "react-router-dom";
+
 function App() {
   /* const Vicky = "Became";
   const Todo = [
@@ -12,17 +14,14 @@ function App() {
   ];
    */
   const [userName, setUserName] = useState([]);
-  // const [psswrd, setPsswrd] = useState("");
+  const [psswrd, setPsswrd] = useState("");
   //const [profile, setProfile] = useState("");
   return (
     <>
-      <input
-        type="text"
-        value={userName}
-        onChange={(e) => setUserName([...userName, e.target.value])}
-      />
-      <LoginContext.Provider value={{ userName, setUserName }}>
-        <ProfilePage />
+      <LoginContext.Provider
+        value={{ userName, setUserName, psswrd, setPsswrd }}
+      >
+        <LoginForm />
       </LoginContext.Provider>
     </>
   );

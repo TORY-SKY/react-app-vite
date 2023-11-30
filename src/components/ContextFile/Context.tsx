@@ -1,5 +1,7 @@
 import { createContext } from "react";
-
-const LoginContext = createContext({});
+interface LoginContextProps {
+  userName: string;
+}
+const LoginContext = createContext<LoginContextProps | undefined>(undefined);
 
 export default LoginContext;
