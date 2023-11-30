@@ -1,8 +1,8 @@
 .FORM{
     flex-direction: column;
     background-color: antiquewhite;
-    object-fit: contain;
-    width: fit-content;
+    
+    width: 30%;
     padding: 12px;
     
 }

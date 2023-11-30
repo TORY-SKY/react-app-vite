@@ -13,15 +13,15 @@ function App() {
     { id: 3, text: `${Vicky} An Automotive Engineer` },
   ];
    */
-  const [userName, setUserName] = useState([]);
-  const [psswrd, setPsswrd] = useState("");
+  const [userName, setUserName] = useState(false);
+  const [psswrd, setPsswrd] = useState(Number);
   //const [profile, setProfile] = useState("");
   return (
     <>
       <LoginContext.Provider
         value={{ userName, setUserName, psswrd, setPsswrd }}
       >
-        <LoginForm />
+        {userName ? <ProfilePage /> : <LoginForm />}
       </LoginContext.Provider>
     </>
   );
