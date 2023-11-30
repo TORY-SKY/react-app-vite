@@ -11,14 +11,18 @@ function App() {
     { id: 3, text: `${Vicky} An Automotive Engineer` },
   ];
    */
-  const [userName, setUserName] = useState("Victor");
-  const [psswrd, setPsswrd] = useState("");
-  const [profile, setProfile] = useState("");
+  const [userName, setUserName] = useState([]);
+  // const [psswrd, setPsswrd] = useState("");
+  //const [profile, setProfile] = useState("");
   return (
     <>
+      <input
+        type="text"
+        value={userName}
+        onChange={(e) => setUserName([...userName, e.target.value])}
+      />
       <LoginContext.Provider value={{ userName, setUserName }}>
         <ProfilePage />
-        <LoginForm />
       </LoginContext.Provider>
     </>
   );
