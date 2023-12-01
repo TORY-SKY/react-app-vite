@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import LoginContext from "./ContextFile/Context";
 import "./style.css";
 
 const LoginForm = () => {
   const { userName, setUserName } = useContext(LoginContext);
+
   return (
     <div>
       <form
@@ -11,15 +12,17 @@ const LoginForm = () => {
         className="container justify-content-center align-items-center d-flex mt-5 FORM"
       >
         <input
-          type="email"
+          type="text"
           name=""
           id=""
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
-          placeholder="enter your email boss"
+          placeholder="enter your user name"
         />
         <input type="password" placeholder="password here bro" />
-        <button className="btn btn-success w-100">Login</button>
+        <button className="btn btn-success w-100" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );
