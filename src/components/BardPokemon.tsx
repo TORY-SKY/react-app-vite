@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import babrbershop from "./images/barbershop.png";
 const PokemonList = () => {
   const [pokemon, setPokemon] = useState([]);
 
@@ -18,6 +18,7 @@ const PokemonList = () => {
         <div key={pokemon.name}>
           <h3>{pokemon.name}</h3>
           <img src={pokemon.image} alt={pokemon.name} />
+          <img src={babrbershop} alt={pokemon.name} />
         </div>
       ))}
     </div>

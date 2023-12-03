@@ -1,17 +1,14 @@
-import LoginContext from "./components/ContextFile/Context";
 import { useState } from "react";
-import Navbar from "./components/TheUseCallback";
+import { Routes, Route } from "react-router-dom";
 
+import PokemonList from "./components/BardPokemon.tsx";
 function App() {
   const [userName, setUserName] = useState([]);
 
   return (
     <>
-      <LoginContext.Provider
-        value={{ userName, setUserName, psswrd, setPsswrd }}
-      >
-        <Navbar />
-      </LoginContext.Provider>
+      <h1>hello world</h1>
+      <PokemonList />
     </>
   );
 }

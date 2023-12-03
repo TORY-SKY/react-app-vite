@@ -14,3 +14,7 @@
     margin-bottom: 12px;
     border: none;
 }
+nav a.active{
+    font-weight: bold;
+    
+}
