@@ -1,0 +1,49 @@
+body{
+    background-color: bisque
+}
+.HomePage{
+    color: white;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+div form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 6px solid rgb(108, 93, 93);
+    border-radius: 12px ;
+    padding: 20px;
+    color: black
+
+  
+}
+div form input{
+    padding: 5px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(184, 190, 195);
+}
+.MOBPASS{
+    width: 100%;
+}
+div select{
+    padding-right: 12px;
+}
+.col-4 img{
+    width: 240px;
+    align-items: center;
+    justify-content: center;
+}

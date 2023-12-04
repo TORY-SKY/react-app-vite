@@ -1,0 +1,13 @@
+h1{
+    font-size: 500px;
+    color: red;
+}
+.ABOUT{
+    width: 100%;
+    background-color: black;
+    background-image: url(../imagess/243a7ef31d064a87ae3639012d02f1e4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}

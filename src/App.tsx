@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-
-import PokemonList from "./components/BardPokemon.tsx";
+import LandingPage from "./components/ReactRouter/landingPage.tsx";
+import ABOUT from "./components/ReactRouter/ABOUT.tsx";
 function App() {
-  const [userName, setUserName] = useState([]);
-
   return (
     <>
-      <h1>hello world</h1>
-      <PokemonList />
+      <Routes>
+        <Route path="/" element={<LandingPage />}></Route>
+        <Route path="/about" element={<ABOUT />}></Route>
+      </Routes>
     </>
   );
 }
