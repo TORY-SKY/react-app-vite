@@ -3,9 +3,10 @@ h1{
     color: red;
 }
 .ABOUT{
-    width: 100%;
+    width: 10%;
+    height: 456px !important;
     background-color: black;
-    background-image: url(../imagess/243a7ef31d064a87ae3639012d02f1e4.jpg);
+    background-image: url(../imagess/bg1.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

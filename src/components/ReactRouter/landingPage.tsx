@@ -5,7 +5,9 @@ import { NavLink } from "react-router-dom";
 const LandingPage = () => {
   return (
     <nav className="text-decoration-none mx-5 d-flex justify-content-between align-items-center">
-      <h2>#VANLIFE</h2>
+      <NavLink to="/about" className="text-decoration-none m-4">
+        <h2>#VANLIFE</h2>
+      </NavLink>
       <span className="">
         <NavLink to="/about" className="text-decoration-none m-4">
           About
