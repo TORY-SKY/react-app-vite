@@ -1,7 +1,5 @@
 import React from "react";
 import "./HOME.css";
-import Jumia from "../imagess/JMIA.png";
-import { NavLink } from "react-router-dom";
 export default function SignUp() {
   return (
     <div className="HomePage">
