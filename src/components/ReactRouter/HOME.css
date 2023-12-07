@@ -16,19 +16,18 @@ body{
 
     
 }
-div form{
+.SignUpForm{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 6px solid rgb(108, 93, 93);
-    border-radius: 12px ;
+      border-radius: 12px ;
     padding: 20px;
     color: black
 
   
 }
-div form input{
+div .SignUpForm input{
     padding: 5px;
     margin: 5px;
     outline: none;

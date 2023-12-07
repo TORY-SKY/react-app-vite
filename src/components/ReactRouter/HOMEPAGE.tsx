@@ -4,8 +4,8 @@ export default function SignUp() {
   return (
     <div className="HomePage">
       <div className="row">
-        <div className="col-12">
-          <form action="">
+        <div className="col-12 ">
+          <form className="SignUpForm" action="">
             <h1>SIGN UP</h1>
             <p>Its quick and easy</p>
             <div className="w-100">

@@ -1,0 +1,24 @@
+
+form{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.LoginFormCol{
+    background-image: url(../imagess/Caleb.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.GoogleOption{
+    width: 360px;
+    padding: 12px;
+    
+}
+.GoogleOption img{
+    width: 20%;
+}
+.GoogleOption a{
+    font-size: 1rem !important;
+    text-decoration: none;
+}

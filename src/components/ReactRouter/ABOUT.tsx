@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import "./ABOUT.css";
-
+type APIFunc = {
+  APIfunction: () => void;
+};
 const ABOUT = () => {
   const [data, setData] = useState(0);
   const [loading, setLoading] = useState(null);
@@ -16,7 +18,6 @@ const ABOUT = () => {
     }
   }
 
-  useEffect(APIfunction, [data]);
   return (
     <div className="container ">
       <div className="ABOUT container justify-content-center align-items-center d-flex flex-column">

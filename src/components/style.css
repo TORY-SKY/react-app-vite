@@ -6,14 +6,7 @@
     padding: 12px;
     
 }
-.FORM input{
-    width: 100%;
-    padding: 5px;
-    border-radius: 12px;
-    outline: none;
-    margin-bottom: 12px;
-    border: none;
-}
+
 nav a.active{
     font-weight: bold;
     
