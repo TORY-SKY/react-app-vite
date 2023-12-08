@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import "../ReactRouter/LoginForm.css";
 import Google from "../imagess/google1.png";
 import APPLfavicon from "../imagess/APPLE.png";
-const LoginForm = () => {
+const SignUP = () => {
+  const [displayForm, setDisplayForm] = useState(true);
+  const [closeBTN, setCloseBTN] = useState(false);
+  setInterval(() => {
+    setCloseBTN(true), 3000;
+  });
   return (
-    <div className="container">
+    <div
+      className="container SignUPFORM"
+      style={{ display: displayForm ? "block" : "none" }}
+    >
       <div className="container-fluid row">
         <div className="col-2 bg-secondary LoginFormCol">Hello world</div>
         <div className="col-10 bg-light border-1">
-          <div className="container m-3">
+          <div className="container m-3 row">
+            <div
+              className="d-flex align-items-center justify-content-end CloseBTN"
+              style={{ display: closeBTN ? "block" : "none" }}
+            >
+              <span
+                className="material-symbols-outlined "
+                onClick={() => setDisplayForm(false)}
+              >
+                close
+              </span>
+            </div>
             <h3>Sign up</h3>
             <div>
               <p className="w-50">
@@ -43,9 +62,23 @@ const LoginForm = () => {
                   CONTINUE WITH APPLE
                 </a>
               </div>
-              <div className="container justify-content-end align-items-center d-flex">
+              <div className="container justify-content-start align-items-center d-flex">
                 <hr className="w-50" />
                 OR <hr className="w-50" />
+              </div>
+              <div className="logInDiv d-flex  flex-column">
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  placeholder="Email"
+                  className="my-4"
+                />
+                <button>Continue</button>
+                <div className="d-flex mt-5 ">
+                  <p>Already a redditor</p>
+                  <a href="">Login</a>
+                </div>
               </div>
             </div>
           </div>
@@ -55,4 +88,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignUP;
