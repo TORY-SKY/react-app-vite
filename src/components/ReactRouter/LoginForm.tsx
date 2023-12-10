@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../ReactRouter/LoginForm.css";
 import Google from "../imagess/google1.png";
 import APPLfavicon from "../imagess/APPLE.png";
 const SignUP = () => {
   const [displayForm, setDisplayForm] = useState(true);
   const [closeBTN, setCloseBTN] = useState(false);
-  setInterval(() => {
-    setCloseBTN(true), 3000;
-  });
+  useEffect(
+    function intervalFunc() {
+      setTimeout(() => {
+        setCloseBTN(true), 3000;
+      });
+    },
+    [displayForm]
+  );
   return (
     <div
       className="container SignUPFORM"
