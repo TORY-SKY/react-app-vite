@@ -1,4 +1,6 @@
-
+.SignUPFORM{
+    box-shadow: 12px 2px 30px black;
+}
 form{
     display: flex;
     align-items: center;

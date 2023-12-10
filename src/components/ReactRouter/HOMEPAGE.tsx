@@ -1,58 +1,25 @@
-import React from "react";
 import "./HOME.css";
+import Dev from "../imagess/portfolio_man_5.png";
+import ContextAPII from "../ContextFile/THECONTEXT";
+import { useContext } from "react";
 export default function SignUp() {
+  const { addNo, setaddNo } = useContext(ContextAPII);
   return (
-    <div className="HomePage">
-      <div className="row">
-        <div className="col-12 ">
-          <form className="SignUpForm" action="">
-            <h1>SIGN UP</h1>
-            <p>Its quick and easy</p>
-            <div className="w-100">
-              <input type="text" name="" id="" placeholder="First Name" />
-              <input type="text" name="" id="" placeholder="Last Name" />
-            </div>
-            <input
-              className="MOBPASS"
-              type="text"
-              name=""
-              id=""
-              placeholder="Mobile Numbe or email"
-            />
-            <input
-              type="password"
-              name=""
-              id=""
-              placeholder="New password"
-              className="MOBPASS"
-            />
-
-            <div className="d-block container my-5">
-              <p>Birthday</p>
-              <select name="" id="" className="px-5">
-                <option value="Hellow ">Day</option>
-                <option value="Hellow ">1</option>
-                <option value="Hellow ">2</option>
-                <option value="Hellow ">3</option>
-                <option value="Hellow ">4</option>
-              </select>
-              <select name="" id="">
-                <option value="Hellow ">Month</option>
-                <option value="Hellow ">1</option>
-                <option value="Hellow ">2</option>
-                <option value="Hellow ">3</option>
-                <option value="Hellow ">4</option>
-              </select>
-              <select name="" id="">
-                <option value="Hellow ">Year</option>
-                <option value="Hellow ">1</option>
-                <option value="Hellow ">2</option>
-                <option value="Hellow ">3</option>
-                <option value="Hellow ">4</option>
-              </select>
-            </div>
-            <button className=" btn btn-succes w-100 ">Sign Up</button>
-          </form>
+    <div className="container-fluid px-4 HomePage d-flex flex-column justify-content-center align-items-start text-light">
+      <div className="container row">
+        <div className="col-8 px-4 landingpageText">
+          <h1>VICKTORY sky</h1>
+          <p>A Passionate Software Developer</p>
+          <span>with a year of experience in Web developement</span>
+          <div className="buttons">
+            <button>My CV</button>
+            <button onClick={() => setaddNo(addNo + 1)}>Contact Us</button>
+          </div>
+        </div>
+        <div className="col-4 COL-4-img d-flex align-items-center justify-content-center">
+          <div className="container ">
+            <img src={Dev} className="" alt="" />
+          </div>
         </div>
       </div>
     </div>

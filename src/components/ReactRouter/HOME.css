@@ -1,48 +1,45 @@
-body{
-    background-color: bisque
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 .HomePage{
-    color: white;
-    padding: 12px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: auto;
-
+    box-sizing: border-box;
+    background-image: url(../imagess/bgImg1.jpg);
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
     
+   
 }
-.SignUpForm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-      border-radius: 12px ;
-    padding: 20px;
-    color: black
+.landingpageText > h1, p{
+    font-family: 'Nova Square', sans-serif;
+    
+    margin: 0;
+    padding: 0;
+    z-index: 1;
 
-  
 }
-div .SignUpForm input{
-    padding: 5px;
-    margin: 5px;
+
+.landingpageText > .buttons{
+    display: flex;
+    width: 50%;
+}
+.landingpageText > .buttons > button{
+   
+    border: 1px solid;
+    border-radius: 15px;
     outline: none;
-    border: none;
-    border-radius: 7px;
-    background-color: rgb(184, 190, 195);
+    background-color: rgb(126, 137, 126);
+    margin-top: 9px;
+    margin-right: 5px;
+    box-shadow: 1px 2px 20px rgb(138, 16, 16);
+    transition: 1s;
 }
-.MOBPASS{
-    width: 100%;
+.landingpageText > .buttons > button:hover{
+    background-color: azure;
 }
-div select{
-    padding-right: 12px;
-}
-.col-4 img{
-    width: 240px;
-    align-items: center;
-    justify-content: center;
+.COL-4-img img{
+    width: 250px;
+    height: 400px;
 }

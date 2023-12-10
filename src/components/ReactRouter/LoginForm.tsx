@@ -2,17 +2,13 @@ import React, { useEffect, useState } from "react";
 import "../ReactRouter/LoginForm.css";
 import Google from "../imagess/google1.png";
 import APPLfavicon from "../imagess/APPLE.png";
+import ContextAPII from "../ContextFile/THECONTEXT";
+import { useContext } from "react";
 const SignUP = () => {
-  const [displayForm, setDisplayForm] = useState(true);
-  const [closeBTN, setCloseBTN] = useState(false);
-  useEffect(
-    function intervalFunc() {
-      setTimeout(() => {
-        setCloseBTN(true), 3000;
-      });
-    },
-    [displayForm]
-  );
+  //contextAPI
+  const { addNo, setCloseBTN, closeBTN, displayForm, setDisplayForm } =
+    useContext(ContextAPII);
+
   return (
     <div
       className="container SignUPFORM"
@@ -33,6 +29,7 @@ const SignUP = () => {
                 close
               </span>
             </div>
+            <h1>{addNo} items has been added to the cart bro</h1>
             <h3>Sign up</h3>
             <div>
               <p className="w-50">

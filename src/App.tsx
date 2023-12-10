@@ -4,15 +4,19 @@ import LandingPage from "./components/ReactRouter/landingPage.tsx";
 import ABOUT from "./components/ReactRouter/ABOUT.tsx";
 import HOMEPAGE from "./components/ReactRouter/HOMEPAGE.tsx";
 import SignUP from "./components/ReactRouter/LoginForm.tsx";
+import Context from "./components/ContextFile/Context.tsx";
 function App() {
   return (
     <>
-      <LandingPage />
-      <SignUP />
-      <Routes>
-        <Route path="/" element={<HOMEPAGE />}></Route>
-        <Route path="/about" element={<ABOUT />}></Route>
-      </Routes>
+      <Context>
+        <LandingPage />
+
+        <Routes>
+          <Route path="/" element={<HOMEPAGE />}></Route>
+          <Route path="/about" element={<ABOUT />}></Route>
+          <Route path="/signup" element={<SignUP />}></Route>
+        </Routes>
+      </Context>
     </>
   );
 }
