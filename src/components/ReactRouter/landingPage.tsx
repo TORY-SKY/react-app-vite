@@ -34,9 +34,9 @@ const LandingPage = () => {
           onClick={SignupBTN}
         >
           Sign Up
-          <div className="message">{addNo}</div>
         </NavLink>
       </span>
+      <NavLink to="/api">API</NavLink>
     </nav>
   );
 };
