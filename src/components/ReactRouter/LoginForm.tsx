@@ -4,7 +4,19 @@ import Google from "../imagess/google1.png";
 import APPLfavicon from "../imagess/APPLE.png";
 import ContextAPII from "../ContextFile/THECONTEXT";
 import { useContext } from "react";
+import axios from "axios";
 const SignUP = () => {
+  const URL =
+    "https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={afb8d9b92457def07c3d891626c4b57b}";
+  const WeatherAPI = async () => {
+    try {
+      const response = axios.get(URL);
+      console.log(response.data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   //contextAPI
   const { addNo, setCloseBTN, closeBTN, displayForm, setDisplayForm } =
     useContext(ContextAPII);

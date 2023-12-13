@@ -6,10 +6,12 @@ import HOMEPAGE from "./components/ReactRouter/HOMEPAGE.tsx";
 import SignUP from "./components/ReactRouter/LoginForm.tsx";
 import Context from "./components/ContextFile/Context.tsx";
 import AppliPrograI from "./components/AppliPrograI.tsx";
+import WeatherAPI from "./components/API_FILES/WeatherAPI.tsx";
 function App() {
   return (
     <>
       <Context>
+        <WeatherAPI />
         <LandingPage />
 
         <Routes>
