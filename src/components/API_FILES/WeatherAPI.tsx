@@ -7,7 +7,6 @@ const WeatherAPI = () => {
   const [city, setCity] = useState(0);
   const [lat, setLat] = useState(0);
   const [data, setData] = useState(0);
-  const Obb = { vic: "is my Name", music: "i love" };
   const URL_KEY: string = "dc4c9cbda170044955baca69418e9eea";
   const URL: string = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${URL_KEY}`;
   const WeatherAPI = async () => {
@@ -25,14 +24,18 @@ const WeatherAPI = () => {
         <h1>Weather APP</h1>
       </nav>
       <div className="WeatherAppDiv container">
-        <div className="container border border-4 row d-flex flex-column align-items-center justify-content-center p-3">
+        <div className="container border border-4 rounded-3  row d-flex flex-column align-items-center justify-content-center p-3">
           <div className="inputContainer d-flex align-items-center justify-content-center">
-            <input type="text" className="" />
-            <button className="btn  bg-success searchBTN" onClick={WeatherAPI}>
+            <input
+              type="text"
+              className=""
+              onChange={(e) => setCity(e.target.value)}
+            />
+            <button className=" searchBTN" onClick={WeatherAPI}>
               search
             </button>
           </div>
-          <img src={searchIcon} className="w-25" alt="Some weather images" />
+          <img src="{}" className="w-25" alt="Some weather images" />
           <h1>SOME WEATHER DEGREES</h1>
           <h3>LOCATION</h3>
           <div>

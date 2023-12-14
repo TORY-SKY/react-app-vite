@@ -1,4 +1,3 @@
-import "./HOME.css";
 import Dev from "../imagess/portfolio_man_5.png";
 import ContextAPII from "../ContextFile/THECONTEXT";
 import { useContext } from "react";
