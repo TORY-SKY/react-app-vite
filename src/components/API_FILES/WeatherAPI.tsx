@@ -1,12 +1,15 @@
 import axios from "axios";
 import React, { useState } from "react";
+import searchIcon from "../imagess/searchIcon.png";
+import "./API_CSS/WeatherAPI.css";
 
 const WeatherAPI = () => {
-  const [long, setlong] = useState(0);
+  const [city, setCity] = useState(0);
   const [lat, setLat] = useState(0);
   const [data, setData] = useState(0);
-  const URL_KEY = "3a33c91f8a77ec89fb6d58536eb1ede9";
-  const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${URL_KEY}`;
+  const Obb = { vic: "is my Name", music: "i love" };
+  const URL_KEY: string = "dc4c9cbda170044955baca69418e9eea";
+  const URL: string = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${URL_KEY}`;
   const WeatherAPI = async () => {
     try {
       const response = await axios.get(URL);
@@ -17,39 +20,27 @@ const WeatherAPI = () => {
   };
   return (
     <div>
+      {console.log(data.data)}
       <nav className="nav navbar d-flex align-items-center justify-content-center">
         <h1>Weather APP</h1>
       </nav>
-      <div className="container-fluid">
-        <form action="">
-          <div>
-            <input
-              type="number"
-              placeholder="longitude"
-              value={long}
-              onChange={(e) => setlong(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="latitude"
-              value={lat}
-              onChange={(e) => setLat(e.target.value)}
-            />
-            <input
-              type="button"
-              value="search"
-              className="btn btn-success"
-              onClick={WeatherAPI}
-            />
+      <div className="WeatherAppDiv container">
+        <div className="container border border-4 row d-flex flex-column align-items-center justify-content-center p-3">
+          <div className="inputContainer d-flex align-items-center justify-content-center">
+            <input type="text" className="" />
+            <button className="btn  bg-success searchBTN" onClick={WeatherAPI}>
+              search
+            </button>
           </div>
-        </form>
-        <div className="container d-flex align-items-center justify-content-center">
-          <h1>{data.id}</h1>
-          {isNaN(lat && long) ? (
-            console.log(data)
-          ) : (
-            <h2 style={{ color: "red" }}> "wrong input"</h2>
-          )}
+          <img src={searchIcon} className="w-25" alt="Some weather images" />
+          <h1>SOME WEATHER DEGREES</h1>
+          <h3>LOCATION</h3>
+          <div>
+            <div className="row">
+              <div className="col-6">HUMIDITY</div>
+              <div className="col-6">WIND SPEED</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

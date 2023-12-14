@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <Context>
-        <WeatherAPI />
         <LandingPage />
 
         <Routes>
@@ -19,6 +18,7 @@ function App() {
           <Route path="/about" element={<ABOUT />}></Route>
           <Route path="/signup" element={<SignUP />}></Route>
           <Route path="/api" element={<AppliPrograI />}></Route>
+          <Route path="/weather" element={<WeatherAPI />}></Route>
         </Routes>
       </Context>
     </>

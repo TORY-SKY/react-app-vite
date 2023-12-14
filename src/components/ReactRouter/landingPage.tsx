@@ -37,6 +37,7 @@ const LandingPage = () => {
         </NavLink>
       </span>
       <NavLink to="/api">API</NavLink>
+      <NavLink to="/weather">Weather</NavLink>
     </nav>
   );
 };
