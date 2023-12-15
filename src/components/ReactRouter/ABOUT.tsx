@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-
-import "./ABOUT.css";
 type APIFunc = {
   APIfunction: () => void;
 };
@@ -19,7 +17,7 @@ const ABOUT = () => {
   }
 
   return (
-    <div className="container ">
+    <div className="container bg-dark">
       <div className="ABOUT container justify-content-center align-items-center d-flex flex-column">
         <h1>
           Your got the travel plans, <br /> we got the travel van.

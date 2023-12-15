@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import "./Landingpage.css";
 import { NavLink } from "react-router-dom";
 import ContextAPII from "../ContextFile/THECONTEXT";
 const LandingPage = () => {

@@ -1,0 +1,7 @@
+
+.WeatherAppDiv .with-boostrap {
+    background-color: blue !important;
+    font-size: 120rem;
+    @apply p-5;
+}
+.
