@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body{
-    background-color: rgb(181, 181, 226) !important;
+    
     box-sizing: border-box;
   
 }

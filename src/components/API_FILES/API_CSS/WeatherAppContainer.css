@@ -10,3 +10,21 @@
 @media screen {
     
 }
+.IMAGE{
+    transition: 1s;
+
+}
+.WeatherDetails{
+    background-color: rgba(203, 203, 216, 0.4);
+}
+.SearchIcon{
+    transition: 0.3s;
+   
+}
+.SearchIcon:hover{
+    transform: scale(1.4);
+}
+.landingPageImg{
+    border-radius: 50%;
+    
+}

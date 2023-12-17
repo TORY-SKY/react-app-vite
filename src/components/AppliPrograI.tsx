@@ -29,7 +29,12 @@ const AppliPrograI = () => {
       <h1>Generate An Excuse</h1>
       <h2>Fetched Excuse:</h2>
       {excuseA.length > 0 && (
-        <h2 key={excuseA[0].id}>{excuseA[0].excuse}</h2> // Render only first excuse
+        <h2
+          key={excuseA[0].id}
+          className=" container border border-3 rounded-2 p-3 "
+        >
+          {excuseA[0].excuse}
+        </h2> // Render only first excuse
       )}
       <h2>Error: {errors}</h2>
       <button
