@@ -1,7 +1,10 @@
 .weatherContent{
     background-image: url(../weatherImages/weatherIMG.jpg);
-    background-position: cr;
-    background-repeat: no-repeat;
+    
+    
+}
+.WeatherDiv{
+    width: 400px !important;
 }
 .textArea h1{
     font-size: 5rem;
@@ -27,4 +30,17 @@
 .landingPageImg{
     border-radius: 50%;
     
+}
+/*SignUp page design*/
+.GoogleOption{
+    width: 400px;
+    overflow: hidden;
+    height: 100px;
+   
+}
+.LoginFormCol{
+    background-image: url("../weatherImages/landscape.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

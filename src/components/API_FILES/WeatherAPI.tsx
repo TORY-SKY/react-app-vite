@@ -49,7 +49,7 @@ const WeatherAPI = () => {
         {/* Conditional Statement for Empty input */}
         {city === "" ? (
           <div className="alert alert-danger" role="alert">
-            Input cannot be empty
+            Input cannot be empty, hope you know?
           </div>
         ) : (
           true
@@ -64,6 +64,7 @@ const WeatherAPI = () => {
               className="w-100 mx-2 border-none outline-none rounded-4 p-3 searchBox"
               placeholder="Search Cities"
               onChange={SearchCity}
+              onKeyDown={(e) => e.key === "Enter" && handleEnter(e)}
             />
             {/* Search icon */}
             <div
@@ -79,6 +80,7 @@ const WeatherAPI = () => {
                   fontSize: "1.5rem",
                   cursor: "pointer",
                 }}
+                /*This part of the code  */
                 onClick={city ? WeatherAPI : null}
               />
             </div>

@@ -9,10 +9,7 @@ export default function SignUp() {
       <div className="container bg-dark text-light">
         <div className="row">
           <div className="container-fluid d-flex">
-            <div className="imgDIV bg-dark m-4 border-dark border-4 rounded-3 overflow-hidden">
-              <img src={Victory} className="w-100" alt="" />
-            </div>
-            <div className="textA container d-flex flex-column justify-content-center">
+            <div className=" col-lg-6 col-sm-12 textA container d-flex flex-column justify-content-center">
               <h1>VICTORY SKY</h1>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -21,9 +18,16 @@ export default function SignUp() {
                 Sint deserunt dignissimos at incidunt porro?
               </p>
               <div className="btnDiv">
-                <button className="btn btn-danger m-2 w-25 ">MY CV</button>
-                <button className="btn btn-success m-2 w-25 ">HIRE US</button>
+                <button className="btn btn-danger m-2 w-25 btn-xs">
+                  MY CV
+                </button>
+                <button className="btn btn-success m-2 w-25 btn-xs">
+                  HIRE US
+                </button>
               </div>
+            </div>
+            <div className=" col-lg-6 col-sm-12 imgDIV bg-dark m-4 border-dark border-4 rounded-3 overflow-hidden">
+              <img src={Victory} className="w-100 img-fluid" alt="" />
             </div>
           </div>
         </div>

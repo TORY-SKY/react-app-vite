@@ -17,7 +17,7 @@ const SignUP = () => {
   };
 
   //contextAPI
-  const { addNo, setCloseBTN, closeBTN, displayForm, setDisplayForm } =
+  const { addNo, closeBTN, displayForm, setDisplayForm } =
     useContext(ContextAPII);
 
   return (
@@ -26,7 +26,7 @@ const SignUP = () => {
       style={{ display: displayForm ? "block" : "none" }}
     >
       <div className="container-fluid row">
-        <div className="col-2 bg-secondary LoginFormCol">Hello world</div>
+        <div className="col-2 bg-secondary LoginFormCol"></div>
         <div className="col-10 bg-light border-1">
           <div className="container m-3 row">
             <div
@@ -63,14 +63,18 @@ const SignUP = () => {
               </span>
             </div>
             <div className="LoginOptionDiv">
-              <div className="GoogleOption px-5 mb-1  border border-primary border-2 rounded-3 d-flex align-items-center justify-content-between">
-                <img src={Google} className="mx-0" alt="loginwih Google" />
-                <a href="" className="mx-0">
+              <div className="GoogleOption   border border-primary border-2 rounded-3 d-flex align-items-center justify-content-between">
+                <img src={Google} className=" w-50 " alt="loginwih Google" />
+                <a href="" className="mx-0 ">
                   CONTINUE WITH GOOGLE
                 </a>
               </div>
-              <div className="GoogleOption px-5 mb-1  border border-primary border-2 rounded-3 d-flex align-items-center justify-content-between">
-                <img src={APPLfavicon} className="mx-0" alt="loginwih Google" />
+              <div className="GoogleOption   border border-primary border-2 rounded-3 d-flex align-items-center justify-content-between">
+                <img
+                  src={APPLfavicon}
+                  className="mx-0 w-50"
+                  alt="loginwih Google"
+                />
                 <a href="" className="mx-0">
                   CONTINUE WITH APPLE
                 </a>

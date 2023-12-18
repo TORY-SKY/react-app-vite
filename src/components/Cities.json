@@ -1,0 +1,55 @@
+{
+    "cities": [
+      {
+        "name": "New York",
+        "state": "New York",
+        "population": 8398748,
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      {
+        "name": "Los Angeles",
+        "state": "California",
+        "population": 3990456,
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      {
+        "name": "Chicago",
+        "state": "Illinois",
+        "population": 2705994,
+        "latitude": 41.8781,
+        "longitude": -87.6298
+      },
+      {
+        "name": "Houston",
+        "state": "Texas",
+        "population": 2320268,
+        "latitude": 29.7604,
+        "longitude": -95.3698
+      },
+      {
+        "name": "Phoenix",
+        "state": "Arizona",
+        "population": 1680992,
+        "latitude": 33.4484,
+        "longitude": -112.0740
+      },
+      {
+        "name": "Philadelphia",
+        "state": "Pennsylvania",
+        "population": 1584064,
+        "latitude": 39.9526,
+        "longitude": -75.1652
+      },
+      {
+        "name": "San Antonio",
+        "state": "Texas",
+        "population": 1547253,
+        "latitude": 29.4241,
+        "longitude": -98.4936
+      }
+      
+    ]
+  }
+  
