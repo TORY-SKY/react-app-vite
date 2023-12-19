@@ -33,7 +33,8 @@
 }
 /*SignUp page design*/
 .GoogleOption{
-    width: 400px;
+    max-width: 400px;
+    min-width: 200px;
     overflow: hidden;
     height: 100px;
    
@@ -43,4 +44,18 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.LoginOptionDiv{
+    padding: 12px !important;
+    max-width: 400px !important;
+}
+.GoogleOption{
+    max-width: 400px;
+
+}
+.ContinueBtn{
+    background-color: #0d6efd !important;
+    color: white !important;
+    font-size: 1.5rem !important;
+    font-weight: 200;
 }

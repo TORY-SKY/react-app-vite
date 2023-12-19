@@ -40,7 +40,7 @@ const SignUP = () => {
                 close
               </span>
             </div>
-            <h1>{addNo} items has been added to the cart bro</h1>
+            <h1>{addNo}ContextAPI Counter</h1>
             <h3>Sign up</h3>
             <div>
               <p className="w-50">
@@ -63,16 +63,20 @@ const SignUP = () => {
               </span>
             </div>
             <div className="LoginOptionDiv">
-              <div className="GoogleOption   border border-primary border-2 rounded-3 d-flex align-items-center justify-content-between">
-                <img src={Google} className=" w-50 " alt="loginwih Google" />
+              <div className="GoogleOption p-3  border border-primary border-2 rounded-3 d-flex align-items-center justify-content-around">
+                <img
+                  src={Google}
+                  className=" w-25 mx-0"
+                  alt="loginwih Google"
+                />
                 <a href="" className="mx-0 ">
                   CONTINUE WITH GOOGLE
                 </a>
               </div>
-              <div className="GoogleOption   border border-primary border-2 rounded-3 d-flex align-items-center justify-content-between">
+              <div className="GoogleOption p-3  border border-primary border-2 rounded-3 d-flex align-items-center justify-content-around">
                 <img
                   src={APPLfavicon}
-                  className="mx-0 w-50"
+                  className="mx-0 w-25"
                   alt="loginwih Google"
                 />
                 <a href="" className="mx-0">
@@ -89,9 +93,11 @@ const SignUP = () => {
                   name=""
                   id=""
                   placeholder="Email"
-                  className="my-4"
+                  className="my-4 p-3 rounded-2 IputField"
                 />
-                <button>Continue</button>
+                <button className="border-0 rounded-3 p-3 outline-0 btn btn ContinueBtn">
+                  Continue
+                </button>
                 <div className="d-flex mt-5 ">
                   <p>Already a redditor</p>
                   <a href="">Login</a>

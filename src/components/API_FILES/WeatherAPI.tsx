@@ -11,15 +11,16 @@ const WeatherAPI = () => {
   // State to manage user-inputted city and weather data
   const [city, setCity] = useState<string>("");
   const [data, setData] = useState(null);
+  const [loading, setloading] = useState(false);
 
   // API key and URLs for OpenWeatherMap
   const URL_KEY: string = "";
-  const G_url = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${URL_KEY}`;
   const URL: string = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${URL_KEY}`;
 
   // Function to fetch weather data from OpenWeatherMap API
   const WeatherAPI = async () => {
     try {
+      setloading(true);
       const response = await axios.get(URL);
       const Data = await response.data;
       setData(Data);
@@ -39,6 +40,7 @@ const WeatherAPI = () => {
     event.preventDefault();
     if (event.key === "Enter" && city.trim() !== "") {
       console.log("calling the weather API");
+      setloading(true);
       WeatherAPI();
     }
   };
@@ -90,7 +92,13 @@ const WeatherAPI = () => {
             <img src={heavyCloud} alt="" className="w-50 m-3 IMAGE" />
             <div className="textArea d-flex flex-column align-items-center justify-content-center">
               {/* Temperature and City */}
-              {data ? <h1>{Math.floor(data.main.temp)}˚C</h1> : <h1>10˚C</h1>}
+              {data ? (
+                <h1>{Math.floor(data.main.temp)}˚C</h1>
+              ) : (
+                <div className="spinner-border m-5" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+              )}
               <h2>{data ? data.name.toUpperCase() : "City"}</h2>
             </div>
           </div>
