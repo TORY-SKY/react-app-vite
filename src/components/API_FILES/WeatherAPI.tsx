@@ -12,6 +12,15 @@ const WeatherAPI = () => {
   const [city, setCity] = useState<string>("");
   const [data, setData] = useState(null);
   const [loading, setloading] = useState(false);
+  const [inputErrorVisibility, setinputErrorVisibility] = useState(false);
+
+  const InputErrorFUnction = () => {
+    if (city == "") {
+      setinputErrorVisibility(true);
+    } else {
+      setinputErrorVisibility(false);
+    }
+  };
 
   // API key and URLs for OpenWeatherMap
   const URL_KEY: string = "";
@@ -49,13 +58,17 @@ const WeatherAPI = () => {
     <div>
       <div className="WeatherDiv container ">
         {/* Conditional Statement for Empty input */}
-        {city === "" ? (
-          <div className="alert alert-danger" role="alert">
-            Input cannot be empty, hope you know?
-          </div>
-        ) : (
-          true
-        )}
+
+        <div
+          className="alert alert-danger "
+          style={{
+            visibility: inputErrorVisibility == true ? "hidden" : "visible",
+          }}
+          role="alert"
+        >
+          Input cannot be empty, hope you know?
+        </div>
+
         {/* Conditional Statement for Empty input */}
 
         <div className="weatherContent container border rounded-3 p-3">
@@ -67,6 +80,7 @@ const WeatherAPI = () => {
               placeholder="Search Cities"
               onChange={SearchCity}
               onKeyDown={(e) => e.key === "Enter" && handleEnter(e)}
+              onFocus={InputErrorFUnction}
             />
             {/* Search icon */}
             <div

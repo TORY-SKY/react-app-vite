@@ -34,7 +34,7 @@ const SignUP = () => {
               style={{ display: closeBTN ? "block" : "none" }}
             >
               <span
-                className="material-symbols-outlined "
+                className="material-symbols-outlined CloseBTN"
                 onClick={() => setDisplayForm(false)}
               >
                 close
