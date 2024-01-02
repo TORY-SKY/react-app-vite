@@ -45,6 +45,7 @@ const WeatherAPI = () => {
     setCity(CatchCityname);
   }, []);
   /*Enter key function */
+  /*Enter key function here is... */
   const handleEnter = (event) => {
     event.preventDefault();
     if (event.key === "Enter" && city.trim() !== "") {
