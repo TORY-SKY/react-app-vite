@@ -19,6 +19,7 @@ export default function SignUp() {
                 reprehenderit eaque maxime, quo numquam blanditiis laudantium
                 aut!
               </p>
+              <h4>WHAT IS GOING ON</h4>
             </div>
           </div>
           <div className="col-6">
